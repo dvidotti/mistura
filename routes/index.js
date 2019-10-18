@@ -139,8 +139,11 @@ Guest.findOne({email})
               from: 'mistura.congelados@gmail.com',
               to: guest.email, 
               subject: 'Seu cupon com 10% de desconto', 
-              text: `http://localhost:3000/auth/confirm/`,
-              html: `<h1>FUNCIONOU EMAIl</h1>`,
+              text: `Seu cupon com 10% de desconto`,
+        
+              html: 
+              `<h1>Utilze este cupom de 10% de desconto, apresente o codigo YA34567</h1>
+              <img style={width: 100vw; height:auto} src="https://mistura.herokuapp.com/cupon-mobile.jpg">`,
             })
   
         
