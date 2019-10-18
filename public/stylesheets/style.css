@@ -318,3 +318,8 @@ p > span {
   height: 15%;
   width: 90%;
 }
+
+#map {
+  height: 350px;
+  width: 600px;
+}
