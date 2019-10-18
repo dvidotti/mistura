@@ -6,7 +6,7 @@
 
 #sectionOne{
   height: 100vh;
-  background-color:#E5E5E5;
+  background-color:#ebeede;
 }
 .nav{
   display: flex;
@@ -141,13 +141,13 @@
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  background-color: #E5E5E5;
+  background-color: #ebeede;
 }
 
 .misturaDaSemana-sectionTwo{
   margin-top: 20px;
   width: 90%;
-  height: 18%;
+  height: 15%;
 }
 
 .container-sectionTwo{
@@ -169,7 +169,7 @@
 }
 
 .mistura-sectionTwo > img{
-  height: 55%;
+  height: 40%;
 }
 
 .mistura-sectionTwo > p {
@@ -192,17 +192,17 @@ p > span {
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  background-color:  #E5E5E5;
+  background-color:  #ebeede;
 }
 
 #sectionThree > img {
   width: 90%;
-  height: 18%;
+  height: 15%;
 }
 
 #sectionThree > p {
   margin-top: 10px;
-  height: 16%;
+  height: 15%;
   width: 90%;
   font-size: 35px;
   /* background-color: red; */
@@ -241,11 +241,11 @@ p > span {
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  background-color:  #E5E5E5;
+  background-color:  #ebeede;
 }
 
 #sectionFour > img {
-  height: 18%;
+  height: 15%;
   width: 90%;
 }
 
@@ -300,7 +300,21 @@ p > span {
 .embalagem-sectionFour > p {
  width: 70%;
  font-weight: 200;
- font-size: 16px;
+ font-size: 15px;
  line-height: 28px;
  text-align: center;
+}
+
+/* QUINTA SECTION */
+#sectionFive{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color:  #ebeede;
+}
+
+#sectionFive > img{
+  height: 15%;
+  width: 90%;
 }
