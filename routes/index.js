@@ -106,8 +106,8 @@ if (email === '' && phone === '') {
 
 Guest.findOne({email})
   .then((guest) => {
-    // if(guest){
-    if (guest.email.length > 390) {
+    if(guest){
+    // if (guest.email.length > 390) {
       res.render('home', {message: 'Apenas uma inscrição por usuário'})
       return;
     } else {
@@ -143,7 +143,8 @@ Guest.findOne({email})
           //   })
   
             // .then(info => res.render('message', {email, subject, message, info}))
-            res.render('home', {message: "Entraremos em contato em breve"} );
+            // res.redirect('/');
+            res.render('home', {message: "Entraremos em contato em breve"});
           // } else {
           //   res.render('home', {message: "Entraremos em contato em breve"} );
           // }
