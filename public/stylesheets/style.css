@@ -4,7 +4,7 @@
   font-family: 'Exo', sans-serif;
 }
 
-.sectionOne{
+#sectionOne{
   height: 100vh;
   background-color:#E5E5E5;
 }
@@ -136,7 +136,7 @@
 
 /* SECTION TWO */
 
-.sectionTwo{
+#sectionTwo{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -187,7 +187,7 @@ p > span {
 
 /* TERCEIRA SECTION */
 
-.sectionThree{
+#sectionThree{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -195,12 +195,12 @@ p > span {
   background-color:  #E5E5E5;
 }
 
-.sectionThree > img {
+#sectionThree > img {
   width: 90%;
   height: 18%;
 }
 
-.sectionThree > p {
+#sectionThree > p {
   margin-top: 10px;
   height: 16%;
   width: 90%;
@@ -232,4 +232,75 @@ p > span {
 .time-sectionThree > img {
   height: 40%;
   margin-top: 25px;
+}
+
+/* QUARTA SECTION */
+
+#sectionFour{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color:  #E5E5E5;
+}
+
+#sectionFour > img {
+  height: 18%;
+  width: 90%;
+}
+
+.container-sectionFour{
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 82%;
+  /* background-color:red; */
+  width: 90%;
+}
+
+.parcerias-sectionFour{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28%;
+  height: 90%;
+  /* background-color: green; */
+}
+
+.parcerias-sectionFour > p {
+  font-weight: 200;
+  font-size: 28px;
+  line-height: 45px;
+  text-align: center;
+}
+
+.embalagens-sectionFour{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 72%;
+  height: 90%;
+  /* background-color: pink; */
+}
+
+.embalagem-sectionFour{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 31%;
+  height: 90%;
+  /* background-color: blue; */
+}
+
+.embalagem-sectionFour > img{
+  height: 40%;
+}
+
+.embalagem-sectionFour > p {
+ width: 70%;
+ font-weight: 200;
+ font-size: 16px;
+ line-height: 28px;
+ text-align: center;
 }
