@@ -1,12 +1,48 @@
 *{
   padding: 0;
   margin: 0;
+  font-family: 'Exo', sans-serif;
 }
+
+body{
+  margin-top: 100px;
+}
+
 /* PRIMEIRA SECTION */
+.logo{
+  height: 100%;
+}
+
+.logo > img{
+  height: 40px;
+}
+
 .sectionOne{
+  /* display: flex; */
+  height: 100vh;
+  background-color: #ebeede;
+}
+
+.nav{
   display: flex;
-  height: 600px;
-  background-color: blue;
+  align-items: center;
+  height: 10%;
+  width: 100%;
+  background-color: #898d4a;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+.nav > ul {
+  display: flex;
+}
+
+.container-sectionOne{
+  display: flex;
+  align-items: center;
+  height: 60%;
+
 }
 
 .title-form-container{
@@ -14,7 +50,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 45%;
+  width: 50%;
 }
 
 
@@ -22,7 +58,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 55%;
+  width: 50%;
   
 }
 
@@ -32,14 +68,25 @@
 }
 
 .text-sectionOne{
-  width: 80%;
-  margin-bottom: 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 70%;
+  max-width: 500px;
+  /* margin-bottom: 10px; */
 }
 
-.text-sectionOne > h1 {
+.text-sectionOne > img {
+  /* margin-bottom: 50px; */
   text-align: center;
-  font-size: 40px;
+  height: 100px;
   
+}
+
+.text-sectionOne > p {
+  font-size: 24px;
+  font-family: 'Exo', sans-serif;
+  font-weight: 100;
 }
 
 .form-sectionOne{
@@ -54,7 +101,7 @@
 .sectionTwo{
   display: flex;
   flex-direction: column;
-  height: 600px;
+  height: 100vh;
   background-color: lightblue;
 }
 .title-sectionTwo{
