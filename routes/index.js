@@ -2,6 +2,8 @@ const express = require('express');
 const router  = express.Router();
 const User = require('../models/User')
 const Guest = require('../models/Guest')
+// const Lead = require('../models/Lead')
+const Visit = require('../models/Visit')
 const Place = require('../models/Places')
 const bcrypt = require('bcrypt')
 let bcryptSalt = 10;
@@ -9,6 +11,9 @@ const nodemailer = require('nodemailer');
 
 /* GET home page */
 router.get('/', (req, res, next) => {
+  Visit.create({visit: 10})
+  .then(visit => console.log(visit, 'VISITA_____>created'))
+  .catch(err => console.log(err))
   res.render('home');
 });
 
@@ -107,7 +112,6 @@ if (email === '' && phone === '') {
 Guest.findOne({email})
   .then((guest) => {
     if(guest){
-    // if (guest.email.length > 390) {
       res.render('home', {message: 'Apenas uma inscrição por usuário'})
       return;
     } else {
@@ -175,7 +179,34 @@ router.use((req, res, next) => {
 
 
 router.get('/admin', (req, res, next) => {
-  res.render('admin')
+  
+  
+
+  Visit.find()
+  .then(visits => {
+    console.log("---------------------->VISITS", visits)
+    let counter = 0;
+    visits.forEach(visit => {
+      counter += 1
+    })
+
+    Guest.find()
+  .then(guests => {
+    let leads = 0;
+    console.log("---------------------->GUESTS", guests)
+    guests.forEach(visit => {
+      leads += 1
+    })
+    res.render('admin', {visit: counter, leads: leads })
+  })
+
+  })
+  .catch(err => console.log(err))
+
+  
+
+
+ 
 })
 
 
