@@ -141,7 +141,7 @@
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  background-color: #E5E5E5;;
+  background-color: #E5E5E5;
 }
 
 .misturaDaSemana-sectionTwo{
@@ -183,4 +183,53 @@
 
 p > span {
   font-weight: 500;
+}
+
+/* TERCEIRA SECTION */
+
+.sectionThree{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color:  #E5E5E5;
+}
+
+.sectionThree > img {
+  width: 90%;
+  height: 18%;
+}
+
+.sectionThree > p {
+  margin-top: 10px;
+  height: 16%;
+  width: 90%;
+  font-size: 35px;
+  /* background-color: red; */
+  text-align: center;
+  font-weight: 200;
+}
+
+.container-sectionThree{
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  height: 55%;
+  /* background-color: red; */
+
+}
+
+.time-sectionThree{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+  /* background-color: blue; */
+}
+
+.time-sectionThree > img {
+  height: 40%;
+  margin-top: 25px;
 }
