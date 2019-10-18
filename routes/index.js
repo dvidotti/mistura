@@ -122,30 +122,30 @@ Guest.findOne({email})
           if (guest.email !== '') {
             console.log('ENV GMAIL---------->', process.env.GMAIL_PASSWORD);
 
-            // let transporter = nodemailer.createTransport({
-            //   service:'gmail',
-            //   // host: "smtp.gmail.com",
-            //   port: 587,
-            //   auth: {
-            //     user:"mistura.congelados@gmail.com",
-            //     // username: "mistura.congelados@gmail.com", 
-            //     // password: process.env.GMAIL_PASSWORD 
-            //     pass: process.env.GMAIL_PASSWORD 
-            //   }
-            // });
+            let transporter = nodemailer.createTransport({
+              service:'gmail',
+              // host: "smtp.gmail.com",
+              port: 587,
+              auth: {
+                user:"mistura.congelados@gmail.com",
+                // username: "mistura.congelados@gmail.com", 
+                // password: process.env.GMAIL_PASSWORD 
+                pass: process.env.GMAIL_PASSWORD 
+              }
+            });
   
-            // transporter.sendMail({
-            //   from: 'mistura.congelados@gmail.com',
-            //   to: guest.email, 
-            //   subject: 'Seu cupon com 10% de desconto', 
-            //   text: `http://localhost:3000/auth/confirm/`,
-            //   html: `<h1>FUNCIONOU EMAIl</h1>`,
-            // })
+            transporter.sendMail({
+              from: 'mistura.congelados@gmail.com',
+              to: guest.email, 
+              subject: 'Seu cupon com 10% de desconto', 
+              text: `http://localhost:3000/auth/confirm/`,
+              html: `<h1>FUNCIONOU EMAIl</h1>`,
+            })
   
             // .then(info => res.render('message', {email, subject, message, info}))
-            res.render('home', {message: "Entraremos em contato em breve"} ).redirect('/');
+            res.render('home', {message: "Entraremos em contato em breve"} );
           } else {
-            res.render('home', {message: "Entraremos em contato em breve"} ).redirect('/');
+            res.render('home', {message: "Entraremos em contato em breve"} );
           }
         })
         .catch(error => console.log(error))
