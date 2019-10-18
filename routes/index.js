@@ -143,9 +143,9 @@ Guest.findOne({email})
             })
   
             // .then(info => res.render('message', {email, subject, message, info}))
-            res.render('home', {message: "Entraremos em contato em breve"} ).redirect('/home');
+            res.render('home', {message: "Entraremos em contato em breve"} ).redirect('/');
           } else {
-            res.render('home', {message: "Entraremos em contato em breve"} ).redirect('/home');
+            res.render('home', {message: "Entraremos em contato em breve"} ).redirect('/');
           }
         })
         .catch(error => console.log(error))
