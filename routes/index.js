@@ -124,12 +124,9 @@ Guest.findOne({email})
 
             let transporter = nodemailer.createTransport({
               service:'gmail',
-              // host: "smtp.gmail.com",
               port: 587,
               auth: {
                 user:"mistura.congelados@gmail.com",
-                // username: "mistura.congelados@gmail.com", 
-                // password: process.env.GMAIL_PASSWORD 
                 pass: process.env.GMAIL_PASSWORD 
               }
             });
@@ -142,8 +139,7 @@ Guest.findOne({email})
               html: `<h1>FUNCIONOU EMAIl</h1>`,
             })
   
-            // .then(info => res.render('message', {email, subject, message, info}))
-            // res.redirect('/');
+        
             res.render('home', {message: "Entraremos em contato em breve"});
           } else {
             res.render('home', {message: "Entraremos em contato em breve"} );
