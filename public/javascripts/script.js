@@ -33,9 +33,9 @@ let imageurl = "https://cdn1.iconfinder.com/data/icons/maps-and-navigation-11/24
     // latInput.style.visibility = "hidden"
     // lngInput.style.visibility = "hidden"
     // geocoder = new google.maps.Geocoder();
-    let latlng = new google.maps.LatLng(-17, -5.6601331);
+    let latlng = new google.maps.LatLng(-23.546881, -46.632806);
     let mapOptions = {
-      zoom: 2,
+      zoom: 12,
       center: latlng
     }
     map = new google.maps.Map(document.getElementById('map'), mapOptions);
@@ -54,7 +54,7 @@ let imageurl = "https://cdn1.iconfinder.com/data/icons/maps-and-navigation-11/24
         // map.setCenter(results[0].geometry.location);
         lat = results[0].geometry.location.lat();
         lng = results[0].geometry.location.lng();
-        placeName = mapResult[0].address_components[0].long_name
+        // placeName = mapResult[0].address_components[0].long_name
         // let marker = new google.maps.Marker({
         //     map: map,
         //     icon: image,
@@ -72,7 +72,7 @@ let imageurl = "https://cdn1.iconfinder.com/data/icons/maps-and-navigation-11/24
   function setPlaceInfo() {
     saveBtn.style.visibility = 'visible';
     nameInput.innerHTML = `<h1>${placeName}</h1>`;
-    nameInput.value = placeName;
+    // nameInput.value = placeName;
     latInput.value = lat;
     lngInput.value = lng;
   }
