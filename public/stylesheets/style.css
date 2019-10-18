@@ -6,6 +6,7 @@
 
 .sectionOne{
   height: 100vh;
+  background-color:#E5E5E5;
 }
 .nav{
   display: flex;
@@ -34,10 +35,6 @@
   text-decoration: none;
 }
 
-.sectionTwo{
-  height: 100vh;
-  background-color: #898d4a;
-}
 
 .redes-sociais > img{
   margin-left: 5px;
@@ -90,7 +87,8 @@
 .mistura-text-section0ne > p{
   width: 80%;
   max-width: 600px;
-  font-weight: 100;
+  font-weight: 200;
+  line-height: 25px;
 }
 
 .form-section{
@@ -134,4 +132,55 @@
   background-color: transparent;
   color: white;
   height: 30px;;
+}
+
+/* SECTION TWO */
+
+.sectionTwo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: #E5E5E5;;
+}
+
+.misturaDaSemana-sectionTwo{
+  margin-top: 20px;
+  width: 90%;
+  height: 18%;
+}
+
+.container-sectionTwo{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 82%;
+  width: 90%;
+  /* background-color: red; */
+}
+
+.mistura-sectionTwo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80%;
+  width: 30%;
+  /* background-color: blue; */
+}
+
+.mistura-sectionTwo > img{
+  height: 55%;
+}
+
+.mistura-sectionTwo > p {
+  margin-top: 20px;
+ height: 45%; 
+ width: 80%;
+ text-align: center;
+ font-style: normal;
+ font-weight: 200;
+}
+
+p > span {
+  font-weight: 500;
 }
