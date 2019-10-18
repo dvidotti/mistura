@@ -1,20 +1,25 @@
-<h1>YOU ARE ADMIN</h1>
-
-
+<h1>BEM VINDO AO DASHBOARD</h1>
 
 
 <div class='right-block'>
     <h2>ADICIONE NOVAS LOJAS</h2>
     <form id="add-place" action="/add-place" method="POST">
-      <input id="place-name" type="text" name="name"/>
+    <div>
+      <input id="place-name" type="text" name="name" placeholder="Nome da Loja"/>
+    </div>
+    <div>
       <input style="visibility:hidden" id="lat" type="text" name="latitude"/>
+    </div>
+    <div>
       <input style="visibility:hidden"id="lng" type="text" name="longitude"/>
+    </div>
 
-      
-      <label id="search-block" for="search-place">
-        <input  type="text" id="search-place" placeholder="Endereço"/>
-        <button id="search-address-btn" type="button" onclick="codePlace()">Busque o Endereço</button>
-      </label>
+      <div>
+        <label id="search-block" for="search-place">
+          <input  type="text" id="search-place" placeholder="Endereço"/>
+          <button id="search-address-btn" type="button" onclick="codePlace()">Busque o Endereço</button>
+        </label>
+      </div>
       <h2 id="place-question">Selecione o endereço abaixo?</h2>
       <div id="suggestion-list"></div>
       <button id="submit-add-place" type="submit">SAVE</button>
