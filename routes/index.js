@@ -106,7 +106,8 @@ if (email === '' && phone === '') {
 
 Guest.findOne({email})
   .then((guest) => {
-    if (!guest) {
+    // if(guest){
+    if (guest.email.length > 390) {
       res.render('home', {message: 'Apenas uma inscrição por usuário'})
       return;
     } else {
