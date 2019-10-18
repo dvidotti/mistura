@@ -5,6 +5,7 @@ const Guest = require('../models/Guest')
 const Place = require('../models/Places')
 const bcrypt = require('bcrypt')
 let bcryptSalt = 10;
+const nodemailer = require('nodemailer');
 
 /* GET home page */
 router.get('/', (req, res, next) => {
@@ -105,7 +106,7 @@ if (email === '' && phone === '') {
 
 Guest.findOne({email})
   .then((guest) => {
-    if (guest) {
+    if (!guest) {
       res.render('home', {message: 'Apenas uma inscrição por usuário'})
       return;
     } else {
@@ -115,11 +116,39 @@ Guest.findOne({email})
       })
         .then(guest => {
           // res.send()
-          console.log(guest, 'Criado com sucesso')
-          res.render('home', {message: "Entraremos em contato em breve"} ).redirect('/home')
+          console.log(guest, 'Criado com sucesso');
+        
+          if (guest.email !== '') {
+            console.log('ENV GMAIL---------->', process.env.GMAIL_PASSWORD);
+
+            let transporter = nodemailer.createTransport({
+              service:'gmail',
+              // host: "smtp.gmail.com",
+              port: 587,
+              auth: {
+                user:"mistura.congelados@gmail.com",
+                // username: "mistura.congelados@gmail.com", 
+                // password: process.env.GMAIL_PASSWORD 
+                pass: process.env.GMAIL_PASSWORD 
+              }
+            });
+  
+            transporter.sendMail({
+              from: 'mistura.congelados@gmail.com',
+              to: guest.email, 
+              subject: 'Seu cupon com 10% de desconto', 
+              text: `http://localhost:3000/auth/confirm/`,
+              html: `<h1>FUNCIONOU EMAIl</h1>`,
+            })
+  
+            // .then(info => res.render('message', {email, subject, message, info}))
+            res.render('home', {message: "Entraremos em contato em breve"} ).redirect('/home');
+          } else {
+            res.render('home', {message: "Entraremos em contato em breve"} ).redirect('/home');
+          }
         })
         .catch(error => console.log(error))
-    }
+      }
   })
   .catch(err => console.log(err))
 });
